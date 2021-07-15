@@ -42,11 +42,11 @@ export class DigestAuthentication {
     loggerFactory: LoggerFactory,
     ha1: string | undefined,
     username: string | undefined,
-    password: string | undefined
+    password: string | Function | undefined
   ) {
     this.logger = loggerFactory.getLogger("sipjs.digestauthentication");
     this.username = username;
-    this.password = password;
+    this.password = typeof password === "function" ? password() : password;
     this.ha1 = ha1;
     this.nc = 0;
     this.ncHex = "00000000";
