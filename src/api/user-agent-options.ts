@@ -54,7 +54,7 @@ export interface UserAgentOptions {
    * Authorization username.
    * @defaultValue `""`
    */
-  authorizationUsername?: string;
+  authorizationUsername?: string | Function;
 
   /**
    * @deprecated
