@@ -134,7 +134,7 @@ export class DigestAuthentication {
     }
 
     authParams.push("algorithm=" + this.algorithm);
-    authParams.push('username="' + this.username + '"');
+    authParams.push('username="' + this.getUsername() + '"');
     authParams.push('realm="' + this.realm + '"');
     authParams.push('nonce="' + this.nonce + '"');
     authParams.push('uri="' + this.uri + '"');
